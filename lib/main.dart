@@ -1,4 +1,4 @@
-import 'package:ecom_admin_app/home_scree.dart';
+import 'package:ecom_admin_app/user_list/views/home_scree.dart';
 import 'package:ecom_admin_app/user_list/view_models/user_view_model.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
