@@ -5,6 +5,7 @@ import 'package:flutter_svg/flutter_svg.dart';
 
 import '../constants.dart';
 import '../models/Product.dart';
+import '../screens/details/details_screen.dart';
 import '../size_config.dart';
 
 class ProductCard extends StatelessWidget {
@@ -26,14 +27,14 @@ class ProductCard extends StatelessWidget {
         width: getProportionateScreenWidth(width),
         child: GestureDetector(
           onTap: () => 
-          // Navigator.pushNamed(
-          //   context,
-          //   DetailsScreen.routeName,
-          //   arguments: ProductDetailsArguments(product: product)
-                    Navigator.pushNamed(
+          Navigator.pushNamed(
             context,
-            SplashScreen.routeName
-            ,
+            DetailsScreen.routeName,
+            arguments: ProductDetailsArguments(product: product)
+            //         Navigator.pushNamed(
+            // context,
+            // SplashScreen.routeName
+            // ,
           ),
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,

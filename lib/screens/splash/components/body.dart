@@ -1,5 +1,6 @@
 
 // This is the best practice
+import 'package:ecom_admin_app/screens/home/home_screen.dart';
 import 'package:flutter/material.dart';
 
 import '../../../constants.dart';
@@ -71,7 +72,7 @@ class _BodyState extends State<Body> {
                     DefaultButton(
                       text: "Continue",
                       press: () {
-                        Navigator.pushNamed(context, SignInScreen.routeName);
+                        Navigator.pushNamed(context, HomeScreen.routeName);
                       },
                     ),
                     Spacer(),
