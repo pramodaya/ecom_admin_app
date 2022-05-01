@@ -1,6 +1,8 @@
 
 // We use name route
 // All our routes will be available here
+
+import 'package:ecom_admin_app/screens/category/view/category_screen.dart';
 import 'package:flutter/material.dart';
 
 import 'screens/cart/cart_screen.dart';
@@ -27,5 +29,6 @@ final Map<String, WidgetBuilder> routes = {
   DetailsScreen.routeName: (context) => DetailsScreen(),
   CartScreen.routeName: (context) => CartScreen(),
   ProfileScreen.routeName: (context) => ProfileScreen(),
+  CategoryScreen.routeName: (context) => CategoryScreen(),
 
 };

@@ -38,6 +38,7 @@ dependencies:
   http: ^0.13.4
   flutter_svg: ^1.0.3
   quiver: ^3.0.1+1
+  flutter_iconpicker: ^3.1.4+1
   # toast: ^0.1.5
   # fluttertoast: ^8.0.9
 

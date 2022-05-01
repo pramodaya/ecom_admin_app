@@ -59,6 +59,9 @@ class ProductDescription extends StatelessWidget {
             maxLines: 3,
           ),
         ),
+
+
+        
         Padding(
           padding: EdgeInsets.symmetric(
             horizontal: getProportionateScreenWidth(20),
