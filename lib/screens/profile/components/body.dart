@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:provider/provider.dart';
 
+import '../../authantication/authantication_iew_model/authantication_service.dart';
 import 'profile_menu.dart';
 import 'profile_pic.dart';
 
@@ -35,7 +37,9 @@ class Body extends StatelessWidget {
           ProfileMenu(
             text: "Log Out",
             icon: "assets/icons/Log out.svg",
-            press: () {},
+            press: () {
+              context.read<AuthanticationService>().signOut(context);
+            },
           ),
         ],
       ),

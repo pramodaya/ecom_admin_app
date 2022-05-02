@@ -1,11 +1,10 @@
 
 // This is the best practice
-import 'package:ecom_admin_app/screens/home/home_screen.dart';
+import 'package:ecom_admin_app/screens/authantication/view/authantication_wrapper.dart';
 import 'package:flutter/material.dart';
 
 import '../../../constants.dart';
 import '../../../size_config.dart';
-import '../../sign_in/view/sign_in_screen.dart';
 import '../components/splash_content.dart';
 import '../../../components/default_button.dart';
 
@@ -72,7 +71,7 @@ class _BodyState extends State<Body> {
                     DefaultButton(
                       text: "Continue",
                       press: () {
-                        Navigator.pushNamed(context, HomeScreen.routeName);
+                        Navigator.pushNamed(context, AuthanticationWrapper.routeName);
                       },
                     ),
                     Spacer(),

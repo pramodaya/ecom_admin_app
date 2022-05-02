@@ -2,19 +2,20 @@
 // We use name route
 // All our routes will be available here
 
+import 'package:ecom_admin_app/screens/authantication/forgot_password/forgot_password_screen.dart';
+import 'package:ecom_admin_app/screens/authantication/sign_in/view/sign_in_screen.dart';
+import 'package:ecom_admin_app/screens/authantication/sign_up/sign_up_screen.dart';
+import 'package:ecom_admin_app/screens/authantication/view/authantication_wrapper.dart';
 import 'package:ecom_admin_app/screens/category/view/category_screen.dart';
 import 'package:flutter/material.dart';
 
 import 'screens/cart/cart_screen.dart';
 import 'screens/complete_profile/complete_profile_screen.dart';
 import 'screens/details/details_screen.dart';
-import 'screens/forgot_password/forgot_password_screen.dart';
 import 'screens/home/home_screen.dart';
 import 'screens/login_success/login_success_screen.dart';
 import 'screens/otp/otp_screen.dart';
 import 'screens/profile/profile_screen.dart';
-import 'screens/sign_in/view/sign_in_screen.dart';
-import 'screens/sign_up/sign_up_screen.dart';
 import 'screens/splash/splash_screen.dart';
 
 final Map<String, WidgetBuilder> routes = {
@@ -30,5 +31,6 @@ final Map<String, WidgetBuilder> routes = {
   CartScreen.routeName: (context) => CartScreen(),
   ProfileScreen.routeName: (context) => ProfileScreen(),
   CategoryScreen.routeName: (context) => CategoryScreen(),
+  AuthanticationWrapper.routeName : (context) => AuthanticationWrapper(),
 
 };

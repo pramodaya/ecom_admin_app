@@ -1,14 +1,16 @@
-
+import 'package:ecom_admin_app/screens/authantication/forgot_password/forgot_password_screen.dart';
 import 'package:ecom_admin_app/screens/splash/splash_screen.dart';
 import 'package:flutter/material.dart';
+import 'package:provider/provider.dart';
 
-import '../../../../components/custom_surfix_icon.dart';
-import '../../../../components/default_button.dart';
-import '../../../../components/form_error.dart';
-import '../../../../constants.dart';
-import '../../../../helper/keyboard.dart';
-import '../../../../size_config.dart';
-import '../../../login_success/login_success_screen.dart';
+import '../../../../../components/custom_surfix_icon.dart';
+import '../../../../../components/default_button.dart';
+import '../../../../../components/form_error.dart';
+import '../../../../../constants.dart';
+import '../../../../../helper/keyboard.dart';
+import '../../../../../size_config.dart';
+import '../../../../login_success/login_success_screen.dart';
+import '../../../authantication_iew_model/authantication_service.dart';
 
 class SignForm extends StatefulWidget {
   @override
@@ -62,11 +64,11 @@ class _SignFormState extends State<SignForm> {
               Text("Remember me"),
               Spacer(),
               GestureDetector(
-                onTap: () => 
-                // Navigator.pushNamed(
-                //     context, ForgotPasswordScreen.routeName),
-                Navigator.pushNamed(
-                    context, SplashScreen.routeName),
+                onTap: () =>
+                    // Navigator.pushNamed(
+                    //     context, ForgotPasswordScreen.routeName),
+                    Navigator.pushNamed(
+                        context, ForgotPasswordScreen.routeName),
                 child: Text(
                   "Forgot Password",
                   style: TextStyle(decoration: TextDecoration.underline),
@@ -83,7 +85,10 @@ class _SignFormState extends State<SignForm> {
                 _formKey.currentState!.save();
                 // if all are valid then go to success screen
                 KeyboardUtil.hideKeyboard(context);
-                Navigator.pushNamed(context, LoginSuccessScreen.routeName);
+                // Navigator.pushNamed(context, LoginSuccessScreen.routeName);
+                context
+                    .read<AuthanticationService>()
+                    .signIn(context, email!.trim(), password!.trim());
               }
             },
           ),

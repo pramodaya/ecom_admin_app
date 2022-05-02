@@ -1,10 +1,10 @@
 import 'package:ecom_admin_app/screens/category/view/category_screen.dart';
-import 'package:ecom_admin_app/screens/sign_up/sign_up_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 
 import '../../../size_config.dart';
 import '../../../user_list/views/home_scree.dart';
+import '../../authantication/sign_up/sign_up_screen.dart';
 import '../../cart/cart_screen.dart';
 
 class Categories extends StatelessWidget {

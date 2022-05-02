@@ -1,8 +1,10 @@
+import 'package:ecom_admin_app/screens/authantication/sign_in/view/components/sign_form.dart';
 import 'package:flutter/material.dart';
-import '../../../components/social_cart.dart';
-import '../../../constants.dart';
-import '../../../size_config.dart';
-import 'sign_up_form.dart';
+
+import '../../../../../components/no_account_text.dart';
+import '../../../../../components/social_cart.dart';
+import '../../../../../size_config.dart';
+
 
 class Body extends StatelessWidget {
   @override
@@ -16,14 +18,21 @@ class Body extends StatelessWidget {
           child: SingleChildScrollView(
             child: Column(
               children: [
-                SizedBox(height: SizeConfig.screenHeight * 0.04), // 4%
-                Text("Register Account", style: headingStyle),
+                SizedBox(height: SizeConfig.screenHeight * 0.04),
                 Text(
-                  "Complete your details or continue \nwith social media",
+                  "Welcome Back",
+                  style: TextStyle(
+                    color: Colors.black,
+                    fontSize: getProportionateScreenWidth(28),
+                    fontWeight: FontWeight.bold,
+                  ),
+                ),
+                Text(
+                  "Sign in with your email and password  \nor continue with social media",
                   textAlign: TextAlign.center,
                 ),
                 SizedBox(height: SizeConfig.screenHeight * 0.08),
-                SignUpForm(),
+                SignForm(),
                 SizedBox(height: SizeConfig.screenHeight * 0.08),
                 Row(
                   mainAxisAlignment: MainAxisAlignment.center,
@@ -43,11 +52,7 @@ class Body extends StatelessWidget {
                   ],
                 ),
                 SizedBox(height: getProportionateScreenHeight(20)),
-                Text(
-                  'By continuing your confirm that you agree \nwith our Term and Condition',
-                  textAlign: TextAlign.center,
-                  style: Theme.of(context).textTheme.caption,
-                )
+                NoAccountText(),
               ],
             ),
           ),

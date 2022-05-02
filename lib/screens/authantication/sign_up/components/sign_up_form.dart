@@ -1,10 +1,13 @@
+import 'package:ecom_admin_app/constants.dart';
 import 'package:flutter/material.dart';
-import '../../../components/custom_surfix_icon.dart';
-import '../../../components/default_button.dart';
-import '../../../components/form_error.dart';
-import '../../../constants.dart';
-import '../../../size_config.dart';
-import '../../complete_profile/complete_profile_screen.dart';
+import 'package:provider/provider.dart';
+
+import '../../../../components/custom_surfix_icon.dart';
+import '../../../../components/default_button.dart';
+import '../../../../components/form_error.dart';
+import '../../../../size_config.dart';
+import '../../../complete_profile/complete_profile_screen.dart';
+import '../../authantication_iew_model/authantication_service.dart';
 
 
 class SignUpForm extends StatefulWidget {
@@ -53,7 +56,10 @@ class _SignUpFormState extends State<SignUpForm> {
               if (_formKey.currentState!.validate()) {
                 _formKey.currentState!.save();
                 // if all are valid then go to success screen
-                Navigator.pushNamed(context, CompleteProfileScreen.routeName);
+                // Navigator.pushNamed(context, CompleteProfileScreen.routeName);
+                context
+                    .read<AuthanticationService>()
+                    .signUp(context, email!.trim(), password!.trim());
               }
             },
           ),
