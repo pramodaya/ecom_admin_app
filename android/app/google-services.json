@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "22732110456",
+    "project_id": "fiver-ecom-app",
+    "storage_bucket": "fiver-ecom-app.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:22732110456:android:4f31fc9b50f9d9aa848b8d",
+        "android_client_info": {
+          "package_name": "com.pramodaya.base_project.ecom_admin_app"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "22732110456-5mqo1c2hlm85tc0mu8mh3stn0etr05lt.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCPE8HqYsm02bdFq_t4U7ovVpb-1DaaAyg"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "22732110456-5mqo1c2hlm85tc0mu8mh3stn0etr05lt.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

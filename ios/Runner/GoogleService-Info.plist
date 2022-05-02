@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CLIENT_ID</key>
+	<string>22732110456-flnm43tdtq7j56fsmtbvntebemfthb8e.apps.googleusercontent.com</string>
+	<key>REVERSED_CLIENT_ID</key>
+	<string>com.googleusercontent.apps.22732110456-flnm43tdtq7j56fsmtbvntebemfthb8e</string>
+	<key>API_KEY</key>
+	<string>AIzaSyC8AmxMuof6gIVZm833c6cR-IyCP9t5VOw</string>
+	<key>GCM_SENDER_ID</key>
+	<string>22732110456</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>com.pramodaya.base-project.ecom-admin-app-ios</string>
+	<key>PROJECT_ID</key>
+	<string>fiver-ecom-app</string>
+	<key>STORAGE_BUCKET</key>
+	<string>fiver-ecom-app.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<false></false>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false></false>
+	<key>IS_APPINVITE_ENABLED</key>
+	<true></true>
+	<key>IS_GCM_ENABLED</key>
+	<true></true>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true></true>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:22732110456:ios:d87e40e3a6b77c92848b8d</string>
+</dict>
+</plist>

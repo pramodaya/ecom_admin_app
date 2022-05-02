@@ -39,6 +39,10 @@ dependencies:
   flutter_svg: ^1.0.3
   quiver: ^3.0.1+1
   flutter_iconpicker: ^3.1.4+1
+  firebase_auth: ^3.3.16
+  cloud_firestore: ^3.1.13
+  firebase_core: ^1.15.0
+  firebase_analytics: ^9.1.6
   # toast: ^0.1.5
   # fluttertoast: ^8.0.9
 
