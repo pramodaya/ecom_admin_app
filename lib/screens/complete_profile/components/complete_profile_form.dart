@@ -56,11 +56,6 @@ class _CompleteProfileFormState extends State<CompleteProfileForm> {
               if (_formKey.currentState!.validate()) {
                 // Navigator.pushNamed(context, OtpScreen.routeName);
 
-                var x = firstName;
-                var d = lastName ;
-                var r = phoneNumber;
-                var t = address;
-
                 context.read<AuthanticationService>().completeProfile(
                     context, firstName!, lastName!, phoneNumber!, address!);
               }

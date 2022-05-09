@@ -1,47 +1,53 @@
+import 'package:ecom_admin_app/screens/add_product/view/add_product_screen.dart';
 import 'package:ecom_admin_app/screens/category/view/category_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 
+import '../../../models/Product.dart';
 import '../../../size_config.dart';
 import '../../../user_list/views/home_scree.dart';
 import '../../authantication/sign_up/sign_up_screen.dart';
 import '../../cart/cart_screen.dart';
+import '../../order/view/order_screen.dart';
 
 class Categories extends StatelessWidget {
+
+  Product emptyProduct = getEmptyProduct();
   @override
   Widget build(BuildContext context) {
     List<Map<dynamic, dynamic>> categories = [
-      {
-        "icon": Icons.category_outlined,
-        "text": "Category",
-        "screen": "category"
-      },
-      {
-        "icon": Icons.bento_outlined,
-        "text": "Product",
-        "screen": "product"
-      },
-      {
-        "icon": Icons.local_offer_outlined,
-        "text": "Offres",
-        "screen": "offers"
-      },
-      {
-        "icon": Icons.folder_special_outlined,
-        "text": "Special Offers",
-        "screen": "specialoffers"
-      },
+      // {
+      //   "icon": Icons.category_outlined,
+      //   "text": "Category",
+      //   "screen": "category"
+      // },
+      {"icon": Icons.bento_outlined, "text": "Product", "screen": "product"},
+       {"icon": Icons.bento_outlined, "text": "Order", "screen": "order"},
+      // {
+      //   "icon": Icons.local_offer_outlined,
+      //   "text": "Offres",
+      //   "screen": "offers"
+      // },
+      // {
+      //   "icon": Icons.folder_special_outlined,
+      //   "text": "Special Offers",
+      //   "screen": "specialoffers"
+      // },
       // {"icon": "assets/icons/Discover.svg", "text": "More"},
     ];
     return Padding(
       padding: EdgeInsets.all(getProportionateScreenWidth(20)),
       child: Row(
-        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+        mainAxisAlignment: MainAxisAlignment.start,
         crossAxisAlignment: CrossAxisAlignment.start,
         children: List.generate(
           categories.length,
           (index) => CategoryCard(
-            icon: Icon(categories[index]["icon"], color: Colors.pink, size: getProportionateScreenWidth(26),),
+            icon: Icon(
+              categories[index]["icon"],
+              color: Colors.pink,
+              size: getProportionateScreenWidth(26),
+            ),
             text: categories[index]["text"],
             press: () {
               switch (categories[index]["screen"]) {
@@ -49,7 +55,9 @@ class Categories extends StatelessWidget {
                   Navigator.pushNamed(context, CategoryScreen.routeName);
                   break;
                 case "product":
-                  Navigator.pushNamed(context, SignUpScreen.routeName);
+                  Navigator.pushNamed(context, AddProductScreen.routeName,
+                      arguments: AddProductArguments(product: emptyProduct)
+                      );
                   break;
                 case "offers":
                   Navigator.pushNamed(context, SignUpScreen.routeName);
@@ -57,6 +65,8 @@ class Categories extends StatelessWidget {
                 case "specialoffers":
                   Navigator.pushNamed(context, SignUpScreen.routeName);
                   break;
+                case "order": 
+                  Navigator.pushNamed(context, OrderScreen.routeName);
               }
             },
           ),

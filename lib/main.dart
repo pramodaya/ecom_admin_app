@@ -1,7 +1,8 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:ecom_admin_app/routes.dart';
+import 'package:ecom_admin_app/screens/add_product/view_model/add_product_view_model.dart';
 import 'package:ecom_admin_app/screens/authantication/authantication_iew_model/authantication_service.dart';
-import 'package:ecom_admin_app/screens/authantication/view/authantication_wrapper.dart';
+import 'package:ecom_admin_app/screens/order/view_model/order_view_model.dart';
 import 'package:ecom_admin_app/theme.dart';
 import 'package:ecom_admin_app/user_list/view_models/user_view_model.dart';
 import 'package:firebase_auth/firebase_auth.dart';
@@ -33,7 +34,9 @@ class MyApp extends StatelessWidget {
               context.read<AuthanticationService>().authStateChanges,
           initialData: null,
         ),
-        ChangeNotifierProvider(create: (_) => UsersViewModel()),
+        ChangeNotifierProvider(create: (_) => UsersViewModel(),),
+        ChangeNotifierProvider(create: (_) => AddProductViewModel(),),
+         ChangeNotifierProvider(create: (_) => OrderViewModel(),),
       ],
       child: MaterialApp(
         debugShowCheckedModeBanner: false,
@@ -59,7 +62,7 @@ class MyApp extends StatelessWidget {
 //       ),
 //       floatingActionButton: FloatingActionButton(
 //         onPressed: () => FirebaseFirestore.instance
-//             .collection('testing')
+//             .collection('testing').doc()
 //             .add({'timestamp': Timestamp.fromDate(DateTime.now())}),
 //         child: Icon(Icons.add),
 //       ),
@@ -140,3 +143,4 @@ class MyApp extends StatelessWidget {
 //     );
 //   }
 // }
+
