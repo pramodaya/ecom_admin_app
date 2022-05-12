@@ -49,11 +49,11 @@ class ProductCard extends StatelessWidget {
                   ),
                   child: Hero(
                     tag: product.id.toString(),
-                    child: Image.asset(product.images[0]),
+                    child: Image.network(product.images[0]),
                   ),
                 ),
               ),
-              const SizedBox(height: 10),
+              // const SizedBox(height: 10),
               Text(
                 product.title,
                 style: TextStyle(color: Colors.black),
