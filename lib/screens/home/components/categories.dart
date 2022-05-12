@@ -21,7 +21,7 @@ class Categories extends StatelessWidget {
       //   "text": "Category",
       //   "screen": "category"
       // },
-      {"icon": Icons.bento_outlined, "text": "Product", "screen": "product"},
+      {"icon": Icons.production_quantity_limits, "text": "Product", "screen": "product"},
        {"icon": Icons.bento_outlined, "text": "Order", "screen": "order"},
       // {
       //   "icon": Icons.local_offer_outlined,
